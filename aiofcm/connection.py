@@ -226,6 +226,7 @@ class FCMConnectionPool:
             if attempt > self.MAX_ATTEMPTS:
                 logger.warning('Trying to send message %s: attempt #%s',
                                message.message_id, attempt)
+                break
             logger.debug('Message %s: waiting for connection',
                          message.message_id)
             try:
